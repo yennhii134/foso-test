@@ -2,20 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: "Epilogue", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 210 24% 15%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 208 13% 45%;
+    --secondary-50: 0 4% 95%;
+    --secondary-200: 30 4% 80%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --yellow-primary: 44 95% 64%;
+    --white: 0 0% 100%;
+    --brand-50: 214 100% 95%;
+    --brand-100: 212 96% 90%;
+    --brand-primary: 214 99% 39%;
+    --brand-500: 212 98% 48%;
+    --brand-600: 212 98% 40%;
+    --brand-700: 212 97% 30%;
+    --brand-800: 212 98% 20%;
+    --error: 11 100% 59%;
+    --error-dark: 2 77% 41%;
+    --error-darker: 353 86% 26%;
+    --grey-200: 210 22% 96%;
+    --stroke-medium-color: 210 13% 62%;
+    --stroke-low-color: 210 13% 62%;
+    --disabled: 210 13% 62%;
+    --warning-main: 40 100% 50%;
+    --warning-lighter: 48 100% 90%;
+    --warning-light: 44 100% 70%;
+    --fill-outermost: 0 0% 100%;
+
+    /* size */
+    --spacing-1: 8px;
+    --spacing-2: 16px;
+    --content-p: 24px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-primary;
+  }
+}
+
+@layer utilities {
+  .container-layout {
+    @apply mx-auto px-6 lg:px-20 xl:px-28 2xl:px-40 3xl:px-60;
+  }
 }
