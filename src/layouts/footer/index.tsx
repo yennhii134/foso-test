@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 import ButtonDowloadApp from "./button-dowload-app";
 import ContentLink from "./content-link";
 import ContentWrapper from "./content-wrapper";
@@ -60,12 +61,12 @@ const FooterLayout = () => {
         {/* Legal */}
         <ContentWrapper label="Legal">
           <div>
-            <a
+            <Link
               href="/"
               className="text-primary cursor-pointer text-sm 2xl:text-base leading-7 font-semibold before:content-[''] before:inline-block before:w-4 before:border-[1.5px] before:border-primary before:mr-2"
             >
               Privacy policy
-            </a>
+            </Link>
           </div>
           <ContentLink label="Cookie policy" href="/" />
           <ContentLink label="Delivery policy" href="/" />

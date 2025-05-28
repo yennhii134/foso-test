@@ -11,6 +11,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { ArrowRight, ChevronUp } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -37,10 +38,12 @@ export default function Home() {
       <div className="bg-brand-50">
         <div className="container-layout py-8 flex flex-col gap-6 md:gap-2 md:flex-row items-center md:justify-between">
           <div className="flex items-start md:items-center gap-4">
-            <img
+            <Image
               src="/icons/end-icon.svg"
               alt="End Icon"
               className="size-10 xl:size-12"
+              width={100}
+              height={100}
             />
             <p className="text-xl xl:text-3xl leading-8 font-medium text-center">
               Xem hệ thống 88 cửa hàng trên toàn quốc
