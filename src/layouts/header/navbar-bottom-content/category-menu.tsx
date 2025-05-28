@@ -17,10 +17,10 @@ const CategoryMenu = () => {
       <div
         className="relative"
         onMouseEnter={() => {
-          !isMobile && setIsHoveredCategoryMenu(true);
+          if (!isMobile) setIsHoveredCategoryMenu(true);
         }}
         onMouseLeave={() => {
-          !isMobile && setIsHoveredCategoryMenu(false);
+          if (!isMobile) setIsHoveredCategoryMenu(false);
         }}
       >
         <div className="hidden bg-brand text-white py-3 px-4 rounded-lg md:flex items-center gap-2 cursor-pointer">
