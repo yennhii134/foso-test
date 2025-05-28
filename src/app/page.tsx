@@ -60,7 +60,7 @@ export default function Home() {
 
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-8 right-[2%] size-10 border border-brand-800 rounded-full p-2 flex items-center z-50"
+        className="fixed bottom-8 right-[2%] size-10 bg-brand-50 lg:bg-transparent border border-brand-50 lg:border-brand-800 rounded-full p-2 flex items-center z-50"
       >
         <ChevronUp className="text-brand-800" />
       </button>
