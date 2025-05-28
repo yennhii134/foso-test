@@ -38,8 +38,12 @@ const MenuCategory = ({
       className={clsx("py-1 px-4 cursor-pointer rounded-lg", {
         "bg-grey-200": menuActive && menuActive.id === item.id,
       })}
-      onMouseMove={() => setMenuActive(item)}
-      onClick={() => isMobile && handleOnClick()}
+      onMouseMove={() => {
+        !isMobile && setMenuActive(item);
+      }}
+      onClick={() => {
+        isMobile && handleOnClick();
+      }}
     >
       <div>
         <div
