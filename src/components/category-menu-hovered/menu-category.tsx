@@ -23,7 +23,7 @@ const MenuCategory = ({
   const isMenuActived = menuActive && menuActive.id === item.id;
 
   const handleOnClick = () => {
-    if (menuActive) {
+    if (menuActive && isMobile) {
       if (item.id === menuActive.id) {
         setMenuActive({ ...item, id: "" });
       } else {
@@ -39,11 +39,11 @@ const MenuCategory = ({
         "bg-grey-200": menuActive && menuActive.id === item.id,
       })}
       onMouseMove={() => {
-        !isMobile && setMenuActive(item);
+        if (!isMobile) {
+          setMenuActive(item);
+        }
       }}
-      onClick={() => {
-        isMobile && handleOnClick();
-      }}
+      onClick={() => handleOnClick()}
     >
       <div>
         <div
